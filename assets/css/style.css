@@ -1,10 +1,11 @@
 /**************************************** COLORS *********************************/
 :root{
+    --bottom_gray: #F3EEEA;
     --bg_green: #009688;
     --bg_lightgray: #D3DBDB;
     --alert_blue: #8EDAFC;
     --text_gray: #B1B1B1;
-    --app_gray: #EAEAEA;  
+    --app_gray: #EAEAEA;
     
 }
 
@@ -52,8 +53,8 @@ body{
     height: 80px;
 }
 
-.aside_top{
-    border-right: 1px solid var(--text_gray);
+.aside{
+    border-right: 1px solid var(--bg_lightgray);
 }
 
 .message_alert{
@@ -73,3 +74,14 @@ body{
 }
 
 /************************************************* MAIN *********************************/
+
+.main_message{
+    height: calc(100% - 25%);
+    background-image: url(/assets/img/mine.jpg);
+    overflow-y: scroll;
+}
+
+.bottom_input{
+    height: 97px;
+    background-color: var(--bottom_gray);
+}
