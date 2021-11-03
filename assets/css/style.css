@@ -1,0 +1,75 @@
+/**************************************** COLORS *********************************/
+:root{
+    --bg_green: #009688;
+    --bg_lightgray: #D3DBDB;
+    --alert_blue: #8EDAFC;
+    --text_gray: #B1B1B1;
+    --app_gray: #EAEAEA;  
+    
+}
+
+/****************************************** GENERAL ********************************/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-y: hidden;
+}
+/****************************************** BACKGROUND ***********************************/
+.background{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.header_bg{
+    height: 100px;
+    background-color:var(--bg_green);
+}
+
+.main_bg{
+    height: 100vh;
+    background-color: var(--bg_lightgray);
+}
+
+/********************************************** APP ***********************************/
+
+.app_container{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    height: 90vh;
+    padding-top: 20px
+}
+
+/************************************************ ASIDE **************************** */
+.aside_top,
+.main_top{
+    background-color: var(--app_gray);
+    height: 80px;
+}
+
+.aside_top{
+    border-right: 1px solid var(--text_gray);
+}
+
+.message_alert{
+    height: 80px;
+    background-color: var(--alert_blue);
+}
+
+.filter_contacts{
+    height: 50px;
+    background-color: var(--app_gray);
+}
+
+.contacts{
+    height: calc(100% - 30%);
+    background-color: white;
+    overflow-y: scroll;
+}
+
+/************************************************* MAIN *********************************/
