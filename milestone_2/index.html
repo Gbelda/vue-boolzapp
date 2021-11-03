@@ -100,7 +100,6 @@
                                 <h5 class="last_access">
                                     Ultimo accesso oggi alle
                                 </h5>
-
                             </div>
                         </div>
                         <div class="user_options col-3 d-flex
@@ -115,12 +114,16 @@
                     <div class="main_message">
                         <div class="message_container d-flex flex-column">
                             <div class="message col-5 d-flex flex-column
-                                justify-content-center">
+                                justify-content-center"
+                                v-for="(value, name,index)
+                                in contacts[index].messages"
+                                :class="{sent:value.status=='sent',
+                                'receive':value.status=='received'}">
                                 <P>
-                                    Prova
+                                    {{value.text}}
                                 </P>
                                 <h6 class="align-self-end">
-                                    Data di oggi
+                                    {{value.date}}
                                 </h6>
                             </div>
                         </div>

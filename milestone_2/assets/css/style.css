@@ -8,8 +8,8 @@
     --app_gray: #EAEAEA;
     --small_gray: #758793;
     --button_gray: #6B7376;
+    --message_green: #D5F9BA;
 }
-
 /****************************************** GENERAL ********************************/
 *{
     box-sizing: border-box;
@@ -154,6 +154,9 @@ h2{
 }
 
 /************************************************* MAIN *********************************/
+.main{
+    height: 100vh;
+}
 
 .main_message{
     height: 660px;
@@ -196,10 +199,10 @@ h2{
 
 .message{
     max-width: 50%;
-    background-color: white;
     font-size: 1.2rem;
     min-height: 60px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .message p{
@@ -211,4 +214,13 @@ h2{
     font-size: .9rem;
     color: var(--bg_lightgray);
     padding-right: 10px;
+}
+
+.sent{
+    background-color: var(--message_green);
+    align-self: end;
+}
+
+.receive{
+    background-color: white;
 }
