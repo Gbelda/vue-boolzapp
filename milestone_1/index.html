@@ -71,7 +71,9 @@
                         </div>
                     </div>
                     <div class="contacts">
-                        <div class="contact d-flex" v-for="contact in contacts">
+                        <div class="contact d-flex"
+                            v-for="(contact, index) in contacts"
+                            @click='select(index)'>
                             <div class="contact_img col-3">
                                 <img :src="contact.avatar" alt=""
                                     class="w-100">
@@ -89,11 +91,11 @@
                     <div class="main_top d-flex align-content-center">
                         <div class="selected col-9 d-flex">
                             <div class="user_img">
-                                <img src="./assets/img/avatar_7.jpg" alt="">
+                                <img :src="contacts[index].avatar" alt="">
                             </div>
                             <div class="selected_metadata">
                                 <h2>
-                                    Nome Utente
+                                    {{contacts[index].name}}
                                 </h2>
                                 <h5 class="last_access">
                                     Ultimo accesso oggi alle
