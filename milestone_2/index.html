@@ -76,9 +76,9 @@
                             @click='select(index)'>
                             <div class="contact_img col-3">
                                 <img :src="contact.avatar" alt=""
-                                    class="w-100">
+                                    class="w-75">
                             </div>
-                            <h2 class="contact_name col-3">
+                            <h2 class="contact_name col-9">
                                 {{contact.name}}
                             </h2>
                         </div>
@@ -116,8 +116,18 @@
 
                     </div>
                     <!-- ./MESSAGE SECTION -->
-                    <div class="bottom_input">
 
+                    <div class="bottom_input d-flex">
+                        <div class="emotes col-2">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="message_input col-8">
+                            <input type="text" name="message" id="message"
+                                placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="voice col-2">
+                            <i class="fas fa-microphone"></i>
+                        </div>
                     </div>
                     <!-- ./MESSAGE INPUT SECTION -->
                 </div>
