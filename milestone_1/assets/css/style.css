@@ -76,12 +76,14 @@ h2{
     overflow-y: scroll;
 }
 
-.user img{
+.user img,
+.selected img{
     border-radius: 50%;
     width: 90px;
 }
 
-.user{
+.user,
+.selected{
     align-items: center;
     padding-left: 20px;
 }
@@ -165,3 +167,6 @@ h2{
     background-color: var(--bottom_gray);
 }
 
+.last_access{
+    color: var(--small_gray);
+}
