@@ -72,7 +72,8 @@
                     </div>
                     <div class="contacts">
                         <div class="contact d-flex"
-                            v-for="(contact, index) in contacts">
+                            v-for="(contact, index) in contacts"
+                            @click='select(index)'>
                             <div class="contact_img col-3">
                                 <img :src="contact.avatar" alt=""
                                     class="w-100">

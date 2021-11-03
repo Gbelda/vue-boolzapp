@@ -1,0 +1,172 @@
+/**************************************** COLORS *********************************/
+:root{
+    --bottom_gray: #F3EEEA;
+    --bg_green: #009688;
+    --bg_lightgray: #D3DBDB;
+    --alert_blue: #8EDAFC;
+    --text_gray: #B1B1B1;
+    --app_gray: #EAEAEA;
+    --small_gray: #758793;
+}
+
+/****************************************** GENERAL ********************************/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.7rem;
+}
+/****************************************** BACKGROUND ***********************************/
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.header_bg{
+    height: 140px;
+    background-color:var(--bg_green);
+}
+
+.main_bg{
+    height: 100%;
+    background-color: var(--bg_lightgray);
+}
+
+/********************************************** APP ***********************************/
+
+.app_container{
+    width: 90%;
+    display: flex;
+    height: 90vh;
+    z-index: 1; 
+    left: 5%;
+    top: 30px;
+    position: absolute;
+}
+
+/************************************************ ASIDE **************************** */
+.aside_top,
+.main_top{
+    background-color: var(--app_gray);
+    height: 110px;
+}
+
+.aside{
+    border-right: 1px solid var(--bg_lightgray);
+}
+
+.message_alert{
+    height: 100px;
+    background-color: var(--alert_blue);
+}
+
+.filter_contacts{
+    height: 80px;
+    background-color: var(--app_gray);
+}
+
+.contacts{
+    height: 580px;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.user img,
+.selected img{
+    border-radius: 50%;
+    width: 90px;
+}
+
+.user,
+.selected{
+    align-items: center;
+    padding-left: 20px;
+}
+
+.user_options{
+    color: var(--text_gray);
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.bell_logo{
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    color: var(--alert_blue);
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+}
+
+.notif_text{
+    margin-left: 10px;
+}
+
+.toggle_notif{
+    color: var(--small_gray);
+    text-decoration: underline;
+}
+
+.input_container{
+    font-size: 1.5rem;
+    vertical-align: middle;
+    background-color: white ;
+    width: 95%;
+}
+
+.input_container i,
+.input_container input{
+    padding: 10px 0px;
+}
+
+.input_container i{
+    color: var(--text_gray);
+    padding-left: 20px;
+}
+
+.input_container input{
+    border: none;
+    appearance: none;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.input_container input:focus{
+    outline: none;
+}
+
+.contact{
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--app_gray);
+}
+
+.contact img{
+    border-radius: 50%;
+}
+
+.contact_name{
+    padding-left: 30px;
+}
+/************************************************* MAIN *********************************/
+
+.main_message{
+    height: 660px;
+    background-image: url(/milestone_1/assets/img/mine.jpg);
+    overflow-y: scroll;
+}
+
+.bottom_input{
+    height: 100px;
+    background-color: var(--bottom_gray);
+}
+
+.last_access{
+    color: var(--small_gray);
+}

@@ -89,4 +89,9 @@ const app = new Vue({
 
         ]
     },
+    methods: {
+        select(index) {
+            this.index = index
+        }
+    }
 })
