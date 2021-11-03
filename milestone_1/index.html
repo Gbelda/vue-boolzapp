@@ -71,7 +71,15 @@
                         </div>
                     </div>
                     <div class="contacts">
-
+                        <div class="contact d-flex" v-for="contact in contacts">
+                            <div class="contact_img col-3">
+                                <img :src="contact.avatar" alt=""
+                                    class="w-100">
+                            </div>
+                            <h2 class="contact_name col-3">
+                                {{contact.name}}
+                            </h2>
+                        </div>
                     </div>
                     <!-- CONTACTS -->
                 </div>

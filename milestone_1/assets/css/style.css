@@ -139,6 +139,19 @@ h2{
 .input_container input:focus{
     outline: none;
 }
+
+.contact{
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--app_gray);
+}
+
+.contact img{
+    border-radius: 50%;
+}
+
+.contact_name{
+    padding-left: 30px;
+}
 /************************************************* MAIN *********************************/
 
 .main_message{
@@ -151,3 +164,4 @@ h2{
     height: 100px;
     background-color: var(--bottom_gray);
 }
+
