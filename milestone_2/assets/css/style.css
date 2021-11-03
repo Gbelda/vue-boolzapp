@@ -159,6 +159,7 @@ h2{
     height: 660px;
     background-image: url(/milestone_1/assets/img/mine.jpg);
     overflow-y: scroll;
+    width: 100%;
 }
 
 .bottom_input{
@@ -186,4 +187,28 @@ h2{
     border-radius: 10px;
     padding-left:30px;
     font-size: 1.2rem;
+}
+
+.message_container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+.message{
+    max-width: 50%;
+    background-color: white;
+    font-size: 1.2rem;
+    min-height: 60px;
+    border-radius: 10px;
+}
+
+.message p{
+    margin: 0px;
+    padding: 10px 20px 0px;
+}
+
+.message h6{
+    font-size: .9rem;
+    color: var(--bg_lightgray);
+    padding-right: 10px;
 }
