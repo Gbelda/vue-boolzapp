@@ -17,37 +17,34 @@
     margin: 0;
 }
 
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom,
+      var(--bg_green) 0px,
+      var(--bg_green) 120px,
+      var(--bg_lightgray) 100px,
+      var(--bg_lightgray) 100%);
+}
+
 h2{
     font-size: 1.7rem;
 }
-/****************************************** BACKGROUND ***********************************/
 
-.background{
-    width: 100%;
+#root{
     height: 100%;
-    position: absolute;
-}
-
-.header_bg{
-    height: 140px;
-    background-color:var(--bg_green);
-}
-
-.main_bg{
-    height: 100%;
-    background-color: var(--bg_lightgray);
 }
 
 /********************************************** APP ***********************************/
 
 .app_container{
-    width: 90%;
+    width: 80%;
     display: flex;
-    height: 90vh;
-    z-index: 1; 
-    left: 5%;
-    top: 30px;
-    position: absolute;
+    height: 90%;
+    margin: auto;
+    min-width: 1200px;
+    max-width: 1200px;
+    padding-top: 10px;
+
 }
 
 /************************************************ ASIDE **************************** */
@@ -59,6 +56,9 @@ h2{
 
 .aside{
     border-right: 1px solid var(--bg_lightgray);
+    width: calc((100% / 3) * 1);
+    height: 100%;
+    overflow: hidden;
 }
 
 .message_alert{
@@ -72,7 +72,7 @@ h2{
 }
 
 .contacts{
-    height: 580px;
+    height: calc(100% - 290px);
     background-color: white;
     overflow-y: scroll;
 }
@@ -116,7 +116,7 @@ h2{
 }
 
 .input_container{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     vertical-align: middle;
     background-color: white ;
     width: 95%;
@@ -156,7 +156,7 @@ h2{
 /************************************************* MAIN *********************************/
 
 .main_message{
-    height: 660px;
+    height: calc(100% - 210px);
     background-image: url(/milestone_1/assets/img/mine.jpg);
     overflow-y: scroll;
 }

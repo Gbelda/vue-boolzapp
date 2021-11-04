@@ -131,6 +131,4 @@ const app = new Vue({
     }
 
 
-
-
 })
