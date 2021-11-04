@@ -90,13 +90,7 @@ const app = new Vue({
         ],
         index: 0,
         newText: '',
-        newMessage: [
-            {
-                date: dayjs(),
-                text: this.newText,
-                status: 'sent'
-            }
-        ],
+
 
 
     },
@@ -106,7 +100,13 @@ const app = new Vue({
         },
 
         sendMessage(index) {
-            this.contacts[index].messages.push(this.newMessage[0])
+            newMessage = {
+                date: dayjs(),
+                text: this.newText,
+                status: 'sent'
+            }
+            this.contacts[index].messages.push(newMessage)
+            this.newText = ''
         }
     }
 })
