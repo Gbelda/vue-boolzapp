@@ -102,18 +102,18 @@ const app = new Vue({
                 text: this.newText,
                 status: 'sent'
             }
+
             this.contacts[index].messages.push(newMessage)
             this.newText = ''
 
             // AUTO REPLY
-
-            setTimeout(function () {
+            setTimeout(() => {
                 reply = {
                     date: dayjs(),
                     text: "Ok",
                     status: 'received'
                 }
-                return this.contacts[index].messages.push(reply)
+                this.contacts[index].messages.push(reply)
             }, 1000);
 
         },
