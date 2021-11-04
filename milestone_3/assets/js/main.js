@@ -98,7 +98,7 @@ const app = new Vue({
 
         sendMessage(index) {
             newMessage = {
-                date: dayjs(),
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.newText,
                 status: 'sent'
             }
@@ -109,7 +109,7 @@ const app = new Vue({
             // AUTO REPLY
             setTimeout(() => {
                 reply = {
-                    date: dayjs(),
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: "Ok",
                     status: 'received'
                 }
