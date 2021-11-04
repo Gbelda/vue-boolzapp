@@ -90,9 +90,6 @@ const app = new Vue({
         ],
         index: 0,
         newText: '',
-
-
-
     },
     methods: {
         select(index) {
@@ -107,6 +104,21 @@ const app = new Vue({
             }
             this.contacts[index].messages.push(newMessage)
             this.newText = ''
-        }
-    }
+
+            // AUTO REPLY
+
+            setTimeout(function () {
+                reply = {
+                    date: dayjs(),
+                    text: "Ok",
+                    status: 'received'
+                }
+                return this.contacts[index].messages.push(reply)
+            }, 1000);
+
+        },
+
+    },
+
+
 })
