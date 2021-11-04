@@ -8,6 +8,7 @@
     --app_gray: #EAEAEA;
     --small_gray: #758793;
     --button_gray: #6B7376;
+    --message_green: #D5F9BA;
 }
 
 /****************************************** GENERAL ********************************/
@@ -27,7 +28,7 @@ body{
 }
 
 h2{
-    font-size: 1.7rem;
+    font-size: 1.1rem;
 }
 
 #root{
@@ -80,7 +81,7 @@ h2{
 .user img,
 .selected img{
     border-radius: 50%;
-    width: 90px;
+    width: 80px;
 }
 
 .user,
@@ -97,12 +98,12 @@ h2{
 
 .bell_logo{
     background-color: white;
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
+    width: 65px;
+    height: 65px;
+    font-size: 1.5rem;
     color: var(--alert_blue);
     text-align: center;
-    line-height: 70px;
+    line-height: 65px;
     border-radius: 50%;
 }
 
@@ -186,4 +187,37 @@ h2{
     border-radius: 10px;
     padding-left:30px;
     font-size: 1.2rem;
+}
+
+.message_container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+.message{
+    max-width: 50%;
+    font-size: 1.2rem;
+    min-height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.message p{
+    margin: 0px;
+    padding: 10px 20px 0px;
+}
+
+.message h6{
+    font-size: .9rem;
+    color: var(--bg_lightgray);
+    padding-right: 10px;
+}
+
+.sent{
+    background-color: var(--message_green);
+    align-self: end;
+}
+
+.receive{
+    background-color: white;
 }
