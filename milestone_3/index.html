@@ -135,7 +135,10 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="message_input col-8">
-                            <input type="text" name="message" id="message"
+                            <input v-model='newText'
+                                @keyup.enter='sendMessage(index)'
+                                type="text"
+                                name="message" id="message"
                                 placeholder="Scrivi un messaggio">
                         </div>
                         <div class="voice col-2">
@@ -150,6 +153,13 @@
 
         </div>
 
+
+
+
+
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="./assets/js/main.js"></script>
     </body>

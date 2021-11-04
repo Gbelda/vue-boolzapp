@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
-        index: 0,
+
         contacts: [
             {
                 name: 'Michele',
@@ -87,16 +87,26 @@ const app = new Vue({
                 ],
             },
 
-        ]
+        ],
+        index: 0,
+        newText: '',
+        newMessage: [
+            {
+                date: dayjs(),
+                text: this.newText,
+                status: 'sent'
+            }
+        ],
+
+
     },
     methods: {
         select(index) {
             this.index = index
         },
-        sendMessage() {
-            this.contacts[index].messages.push({
-                date: ''
-            })
+
+        sendMessage(index) {
+            this.contacts[index].messages.push(this.newMessage[0])
         }
     }
 })
