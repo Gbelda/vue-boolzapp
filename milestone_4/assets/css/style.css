@@ -1,0 +1,231 @@
+/**************************************** COLORS *********************************/
+:root{
+    --bottom_gray: #F3EEEA;
+    --bg_green: #009688;
+    --bg_lightgray: #D3DBDB;
+    --alert_blue: #8EDAFC;
+    --text_gray: #B1B1B1;
+    --app_gray: #EAEAEA;
+    --small_gray: #758793;
+    --button_gray: #6B7376;
+    --message_green: #D5F9BA;
+}
+/****************************************** GENERAL ********************************/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+h2{
+    font-size: 1.7rem;
+}
+/****************************************** BACKGROUND ***********************************/
+#root{
+    height: 100vh;
+    position: relative;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg_lightgray);
+    position: absolute;
+}
+
+.header_bg{
+    height: 140px;  
+    background-color:var(--bg_green);
+}
+
+
+/********************************************** APP ***********************************/
+
+.app_container{
+    width: 90%;
+    display: flex;
+    height: calc(100% - 30px);
+    z-index: 1; 
+    left: 5%;
+    position: absolute;
+    top: 30px;
+}
+
+/************************************************ ASIDE **************************** */
+.aside_top,
+.main_top{
+    background-color: var(--app_gray);
+    height: 110px;
+    padding: 15px 0px;
+}
+
+.aside{
+    border-right: 1px solid var(--bg_lightgray);
+}
+
+.message_alert{
+    height: 100px;
+    background-color: var(--alert_blue);
+}
+
+.filter_contacts{
+    height: 80px;
+    background-color: var(--app_gray);
+}
+
+.contacts{
+    background-color: white;
+    overflow-y: scroll;
+    height: calc(100% - 292px);
+}
+
+.user img,
+.selected img{
+    border-radius: 50%;
+    width: 90px;
+}
+
+.user,
+.selected{
+    align-items: center;
+    padding-left: 20px;
+}
+
+.user_options{
+    color: var(--text_gray);
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.bell_logo{
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    color: var(--alert_blue);
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+}
+
+.notif_text{
+    margin-left: 10px;
+}
+
+.toggle_notif{
+    color: var(--small_gray);
+    text-decoration: underline;
+}
+
+.input_container{
+    font-size: 1.5rem;
+    vertical-align: middle;
+    background-color: white ;
+    width: 95%;
+}
+
+.input_container i,
+.input_container input{
+    padding: 10px 0px;
+}
+
+.input_container i{
+    color: var(--text_gray);
+    padding-left: 20px;
+}
+
+.input_container input{
+    border: none;
+    appearance: none;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.input_container input:focus,
+.message_input input:focus{
+    outline: none;
+}
+
+.contact{
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--app_gray);
+}
+
+.contact img{
+    border-radius: 50%;
+}
+
+/************************************************* MAIN *********************************/
+
+.main,
+.aside{
+    max-height: 730px;
+}
+
+.main_message{
+    background-image: url(/milestone_1/assets/img/mine.jpg);
+    overflow-y: scroll;
+    width: 100%;
+    height: calc(100% - 212px);
+}
+
+.bottom_input{
+    height: 100px;
+    background-color: var(--bottom_gray);
+}
+
+.last_access{
+    color: var(--small_gray);
+    font-size: 1rem;
+}
+
+.emotes,
+.voice{
+    font-size: 3rem;
+    text-align: center;
+    line-height: 100px;
+    color: var(--button_gray);
+}
+
+.message_input input{
+    width: 100%;
+    margin-top: 10px;
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    padding-left:30px;
+    font-size: 1.2rem;
+}
+
+.message_container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+.message{
+    max-width: 50%;
+    font-size: 1.2rem;
+    min-height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.message p{
+    margin: 0px;
+    padding: 10px 20px 0px;
+}
+
+.message h6{
+    font-size: .9rem;
+    color: var(--bg_lightgray);
+    padding-right: 10px;
+}
+
+.sent{
+    background-color: var(--message_green);
+    align-self: end;
+}
+
+.receive{
+    background-color: white;
+}
