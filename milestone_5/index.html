@@ -111,7 +111,7 @@
                         <div class="message_container d-flex flex-column">
                             <div class="message col-5 d-flex flex-column
                                 justify-content-center"
-                                v-for="(value, name,index)
+                                v-for="(value, index)
                                 in contacts[counter].messages"
                                 :class="{sent:value.status=='sent',
                                 'receive':value.status=='received'}"
@@ -129,7 +129,7 @@
                                         <p>
                                             Message info
                                         </p>
-                                        <p>
+                                        <p @click='deleteMessage(index)'>
                                             Delete message
                                         </p>
                                     </div>

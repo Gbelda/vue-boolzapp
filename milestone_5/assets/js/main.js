@@ -131,6 +131,9 @@ const app = new Vue({
         },
         hoverOut() {
             this.isClicked = false
+        },
+        deleteMessage(index) {
+            this.contacts[this.counter].messages.splice(index, 1)
         }
 
     },
