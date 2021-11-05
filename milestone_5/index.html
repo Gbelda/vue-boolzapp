@@ -74,9 +74,19 @@
                                 <img :src="contact.avatar" alt=""
                                     class="w-75">
                             </div>
-                            <h2 class="contact_name col-9">
-                                {{contact.name}}
-                            </h2>
+                            <div class="contact_meta col">
+                                <div>
+                                    <h2 class="contact_name col-4">
+                                        {{contact.name}}
+                                    </h2>
+                                    <span class="col-8 last_active">
+                                        {{contact.messages[lastElement(contact.messages)].date}}
+                                    </span>
+                                </div>
+                                <h6 class="last_message">
+                                    {{contact.messages[lastElement(contact.messages)].text}}
+                                </h6>
+                            </div>
                         </div>
                     </div>
                     <!-- CONTACTS -->

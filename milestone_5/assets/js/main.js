@@ -92,7 +92,7 @@ const app = new Vue({
         newText: '',
         contactName: '',
         nameArray: [],
-        lastAccess: '',
+        lastAccess: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         isClicked: false,
         isFocused: false,
     },
@@ -134,7 +134,11 @@ const app = new Vue({
         },
         deleteMessage(index) {
             this.contacts[this.counter].messages.splice(index, 1)
+        },
+        lastElement(array) {
+            return array.length - 1
         }
+
 
     },
     computed: {
@@ -143,8 +147,12 @@ const app = new Vue({
                 return contact.name.toLowerCase().indexOf(this.contactName.toLowerCase()) > -1
 
             })
+        },
+        lastText() {
+
         }
-    }
+    },
+
 
 
 })

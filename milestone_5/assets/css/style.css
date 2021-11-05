@@ -97,7 +97,7 @@ h2{
 }
 
 .active{
-    background-color: rgb(170, 169, 169);
+    background-color: rgba(170, 169, 169, 0.192);
 }
 
 .bell_logo{
@@ -154,8 +154,19 @@ h2{
     border-bottom: 1px solid var(--app_gray);
 }
 
+.contact_name{
+    display: inline-block;
+}
+
 .contact img{
     border-radius: 50%;
+}
+
+.last_active,
+.last_message{
+    color: var(--small_gray);
+    font-weight: normal;
+    font-size: .9rem;
 }
 
 /************************************************* MAIN *********************************/
