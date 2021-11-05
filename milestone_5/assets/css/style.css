@@ -173,6 +173,7 @@ h2{
 
 .last_access{
     color: var(--small_gray);
+    font-size: 1rem;
 }
 
 .emotes,
@@ -231,6 +232,26 @@ h2{
 .option_arrow{
     position: absolute;
     right: 3%;
-    top: 0%;
+    top: 20%;
     font-size: .9rem;
+    color: var(--button_gray);
+    text-align: end;
+    z-index: 99;
+    display: none;
+}
+
+.sub_menu{
+    background-color: rgb(236, 229, 221);
+    text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 5px;
+}
+
+.message:hover .option_arrow{
+    display: block;
+}
+
+.option_arrow:hover{
+    cursor: pointer;
 }

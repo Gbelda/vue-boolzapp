@@ -92,6 +92,9 @@ const app = new Vue({
         newText: '',
         contactName: '',
         nameArray: [],
+        lastAccess: '',
+        isClicked: false,
+        isFocused: false,
     },
     methods: {
         select(index) {
@@ -119,6 +122,16 @@ const app = new Vue({
             }, 1000);
 
         },
+        clicked() {
+            if (this.isClicked == false) {
+                this.isClicked = true
+            } else {
+                this.isClicked = false
+            }
+        },
+        hoverOut() {
+            this.isClicked = false
+        }
 
     },
     computed: {

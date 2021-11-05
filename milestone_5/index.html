@@ -114,15 +114,26 @@
                                 v-for="(value, name,index)
                                 in contacts[counter].messages"
                                 :class="{sent:value.status=='sent',
-                                'receive':value.status=='received'}">
+                                'receive':value.status=='received'}"
+                                @mouseleave='hoverOut'>
                                 <P>
                                     {{value.text}}
                                 </P>
                                 <h6 class="align-self-end">
                                     {{value.date}}
                                 </h6>
-                                <span class="option_arrow"><i class="fas
-                                        fa-chevron-down"></i></span>
+                                <span class="option_arrow" @click='clicked'>
+                                    <i class="fas
+                                        fa-chevron-down"></i>
+                                    <div class="sub_menu" v-if="isClicked">
+                                        <p>
+                                            Message info
+                                        </p>
+                                        <p>
+                                            Delete message
+                                        </p>
+                                    </div>
+                                </span>
                             </div>
                         </div>
                     </div>
