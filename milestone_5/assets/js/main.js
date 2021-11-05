@@ -158,7 +158,9 @@ const app = new Vue({
 
             })
         },
-
+        messageArray() {
+            this.contacts[this.counter].messages
+        }
     },
 
 
