@@ -92,7 +92,6 @@ const app = new Vue({
         newText: '',
         contactName: '',
         nameArray: [],
-        lastAccess: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         isClicked: false,
         isFocused: false,
     },
@@ -136,9 +135,20 @@ const app = new Vue({
             this.contacts[this.counter].messages.splice(index, 1)
         },
         lastElement(array) {
-            return array.length - 1
+            let index = array.length - 1
+            return array[index]
+        },
+        lastText(array) {
+            let index = array.length - 1
+            return array[index].text
+        },
+        messagePreview(text) {
+            if (text.length > 20) {
+                return text.substring(0, 20) + '...'
+            } else {
+                return text
+            }
         }
-
 
     },
     computed: {
@@ -148,9 +158,7 @@ const app = new Vue({
 
             })
         },
-        lastText() {
 
-        }
     },
 
 
