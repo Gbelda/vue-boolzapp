@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
-        index: 0,
+        counter: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -91,7 +91,7 @@ const app = new Vue({
     },
     methods: {
         select(index) {
-            this.index = index
+            this.counter = index
         }
     }
 })

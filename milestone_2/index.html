@@ -68,7 +68,8 @@
                     <div class="contacts">
                         <div class="contact d-flex"
                             v-for="(contact, index) in contacts"
-                            @click='select(index)'>
+                            @click='select(index)'
+                            :class="{active: index == counter}">
                             <div class="contact_img col-3">
                                 <img :src="contact.avatar" alt=""
                                     class="w-75">
@@ -86,11 +87,11 @@
                     <div class="main_top d-flex align-content-center">
                         <div class="selected col-9 d-flex">
                             <div class="user_img">
-                                <img :src="contacts[index].avatar" alt="">
+                                <img :src="contacts[counter].avatar" alt="">
                             </div>
                             <div class="selected_metadata">
                                 <h2>
-                                    {{contacts[index].name}}
+                                    {{contacts[counter].name}}
                                 </h2>
                                 <h5 class="last_access">
                                     Ultimo accesso oggi alle
@@ -111,7 +112,7 @@
                             <div class="message col-5 d-flex flex-column
                                 justify-content-center"
                                 v-for="(value, name,index)
-                                in contacts[index].messages"
+                                in contacts[counter].messages"
                                 :class="{sent:value.status=='sent',
                                 'receive':value.status=='received'}">
                                 <P>

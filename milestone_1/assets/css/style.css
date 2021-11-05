@@ -83,6 +83,10 @@ h2{
     width: 70px;
 }
 
+.active{
+    background-color: rgb(170, 169, 169);
+}
+
 .user,
 .selected{
     align-items: center;

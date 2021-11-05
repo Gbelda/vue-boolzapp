@@ -88,12 +88,12 @@ const app = new Vue({
             },
 
         ],
-        index: 0,
+        counter: 0,
         newText: '',
     },
     methods: {
         select(index) {
-            this.index = index
+            this.counter = index
         },
 
         sendMessage(index) {

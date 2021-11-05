@@ -88,24 +88,24 @@ const app = new Vue({
             },
 
         ],
-        index: 0,
+        counter: 0,
         newText: '',
         contactName: '',
         nameArray: [],
     },
     methods: {
         select(index) {
-            this.index = index
+            this.counter = index
         },
 
-        sendMessage(index) {
+        sendMessage(counter) {
             newMessage = {
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.newText,
                 status: 'sent'
             }
 
-            this.contacts[index].messages.push(newMessage)
+            this.contacts[counter].messages.push(newMessage)
             this.newText = ''
 
             // AUTO REPLY
@@ -115,7 +115,7 @@ const app = new Vue({
                     text: "Ok",
                     status: 'received'
                 }
-                this.contacts[index].messages.push(reply)
+                this.contacts[counter].messages.push(reply)
             }, 1000);
 
         },

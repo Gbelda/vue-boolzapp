@@ -96,6 +96,10 @@ h2{
     vertical-align: middle;
 }
 
+.active{
+    background-color: rgb(170, 169, 169);
+}
+
 .bell_logo{
     background-color: white;
     width: 65px;

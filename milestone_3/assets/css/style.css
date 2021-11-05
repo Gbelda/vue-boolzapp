@@ -90,6 +90,10 @@ h2{
     padding-left: 20px;
 }
 
+.active{
+    background-color: rgb(170, 169, 169);
+}
+
 .user_options{
     color: var(--text_gray);
     font-size: 1.8rem;
