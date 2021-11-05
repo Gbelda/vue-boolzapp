@@ -8,6 +8,7 @@
     --app_gray: #EAEAEA;
     --small_gray: #758793;
     --button_gray: #6B7376;
+    --message_green: #D5F9BA;
 }
 
 /****************************************** GENERAL ********************************/
@@ -83,10 +84,6 @@ h2{
     width: 70px;
 }
 
-.active{
-    background-color: rgb(170, 169, 169);
-}
-
 .user,
 .selected{
     align-items: center;
@@ -97,6 +94,10 @@ h2{
     color: var(--text_gray);
     font-size: 1.8rem;
     vertical-align: middle;
+}
+
+.active{
+    background-color: rgb(170, 169, 169);
 }
 
 .bell_logo{
@@ -172,7 +173,6 @@ h2{
 
 .last_access{
     color: var(--small_gray);
-    font-size: 1rem;
 }
 
 .emotes,
@@ -191,4 +191,46 @@ h2{
     border-radius: 10px;
     padding-left:30px;
     font-size: 1.2rem;
+}
+
+.message_container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+.message{
+    max-width: 50%;
+    font-size: 1.2rem;
+    min-height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.message p{
+    margin: 0px;
+    padding: 10px 20px 0px;
+    font-size: 1rem;
+}
+
+.message h6{
+    font-size: .9rem;
+    color: var(--bg_lightgray);
+    padding-right: 10px;
+}
+
+.sent{
+    background-color: var(--message_green);
+    align-self: end;
+}
+
+.receive{
+    background-color: white;
+}
+
+.option_arrow{
+    position: absolute;
+    right: 3%;
+    top: 0%;
+    font-size: .9rem;
 }
